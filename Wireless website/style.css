@@ -19,6 +19,8 @@ body{
     right: 0;
     opacity: 0.5;
     z-index: -1;
+    transform: translateY(var(--scroll-offset));   /* ADDED */
+    transition: transform 0.1s linear;             /* ADDED */
 
 }
 .layer-blur{
@@ -63,13 +65,14 @@ nav{
 nav a{
     font-size: 1rem;
     letter-spacing:0.1rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.3s ease;   /* ADDED */
     text-decoration: none;
     color: inherit;
     z-index: 999;
 }
 nav a:hover{
     color: lightgray;
+    transform: translateY(-3px); /*added*/
 }
 .btn-signing{
     background-color:lightgray ;
@@ -79,13 +82,14 @@ nav a:hover{
     border: none;
     font: size 1rem;
     font-weight: 500;
-    transition: background-color 0.2s ease ;
+    transition: background-color 0.2s ease, transform 0.3s ease;  /* UPDATED */
     cursor:pointer;
     z-index: 999;
 
 }
 .btn-signing:hover{
     background-color: white;
+    transform: scale(1.05);   /* ADDED */
 }
 
 /* MAIN CONTENT */
@@ -158,11 +162,12 @@ main{
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.1em;
-    transition:background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.3s ease;  /* UPDATED */
 
 }
 .btn-get-started:hover{
     background-color: #1a1a1a;
+    transform: translateY(-4px);   /* ADDED */
 }
 
 .btn-signing-main{
@@ -174,10 +179,11 @@ main{
     font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 0.1em;
-    transition:background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.3s ease;  /* UPDATED */
 }
 .btn-signing-main:hover{
     background-color: gray;
+     transform: scale(1.05);   /* ADDED */
 
 }
 .cubes-3d{
