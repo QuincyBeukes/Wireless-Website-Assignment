@@ -66,6 +66,13 @@
   <script>
     AOS.init();
   </script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+        const offset = window.scrollY * 0.3;  // controls parallax speed
+        document.documentElement.style.setProperty("--scroll-offset", offset + "px");
+    });
+  </script>
     
 </body>
 </html>
